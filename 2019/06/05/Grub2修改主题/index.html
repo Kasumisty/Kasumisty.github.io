@@ -31,98 +31,77 @@
 <body class="loading">
     <span id="config-title" style="display:none">Love Cathy</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/whoami/" title="Whoami" target="_blank" rel="noopener">Whoami</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/Kasumisty" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2019 Kasumisty.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
-        by Fechin
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/images/20190603.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://kasumisty.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">Grub2修改主题</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
         <div>
-            <a class="image-logo" href="/"></a>
-            <div class="icon-menu switchmenu"></div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
-    
-    <div id="post0">
-        <p>六月 05, 2019</p>
-        <h2><a href="/2019/06/05/Grub2修改主题/" title="Grub2修改主题" class="posttitle">Grub2修改主题</a></h2>
-        <p class="summary">如何定制一个属于自己的grub主题呢？
-1.下载主题首先需要去网上下载到一款自己心仪的主题
-
-2.安装主题将下载好...</p>
-    </div>
-    
+    <div class="scrollbar"></div>
 </div>
 
-    <div id="primary">
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">Grub2修改主题</h1>
+        <div class="stuff">
+            <span>六月 05, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Grub/">Grub</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Linux/">Linux</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Themes/">Themes</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>如何定制一个属于自己的grub主题呢？</p>
+<h2 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1.下载主题"></a>1.下载主题</h2><p>首先需要去网上<a href="https://www.gnome-look.org/browse/cat/109/" target="_blank" rel="noopener">下载</a>到一款自己心仪的主题</p>
+<p><img src="/images/src/grub主题下载.png" alt="grub主题下载"></p>
+<h2 id="2-安装主题"><a href="#2-安装主题" class="headerlink" title="2.安装主题"></a>2.安装主题</h2><p>将下载好的主题存放至 /boot/grub/themes 目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp 主题包的名字 /boot/grub/themes/</span><br></pre></td></tr></table></figure>
+<p>修改 /etc/default/grub 文件，并在其最后加上如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRUB_GFXMODE=&quot;1920x1080x32&quot;</span><br><span class="line">GRUB_THEME=&quot;/boot/grub/themes/主题包名/theme.txt&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="3-更新配置文件"><a href="#3-更新配置文件" class="headerlink" title="3.更新配置文件"></a>3.更新配置文件</h2><p>最后别忘了更新配置文件！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://www.ytmp3.cn/down/35098.mp3"></li>
+                    
+                        <li title="1" data-url="http://www.ytmp3.cn/down/37610.mp3"></li>
+                    
+                </ul>
+            
+        </div>
         
-<div class="post">
-    <a href="/2019/04/02/tf-nn-conv1d-函数浅析/" title="tf.nn.conv1d()函数浅析">
-        <img src="/images/20190401.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>四月 02, 2019</p>
-        <h3><a href="/2019/04/02/tf-nn-conv1d-函数浅析/" title="tf.nn.conv1d()函数浅析" class="posttitle">tf.nn.conv1d()函数浅析</a></h3>
-        <p>tf.nn.conv1d参见tf.nn.conv1d()的官方文档
-123456789tf.nn.conv1d(    value,    filters...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2019/03/15/Ubuntu 16.04使用hexo快速搭建个人博客/" title="Ubuntu 16.04 使用 Hexo 快速搭建个人博客">
-        <img src="/images/20181021.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>三月 15, 2019</p>
-        <h3><a href="/2019/03/15/Ubuntu 16.04使用hexo快速搭建个人博客/" title="Ubuntu 16.04 使用 Hexo 快速搭建个人博客" class="posttitle">Ubuntu 16.04 使用 Hexo 快速搭建个人博客</a></h3>
-        <p>
-
-  
-  
-    Please enter the password to read the blog.
-    
-  
-
-Incorrect Pa...</p>
-    </div>
-</div>
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="107f7b401cc72ffd0bcc" data-cs="0e6940d5f494d8071a10db02f977c63453c1121a" data-r="blog_comment" data-o="Kasumisty" data-a="Kasumisty" data-d="false">查看评论</div>
 
 
     </div>
     
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-下载主题"><span class="toc-number">1.</span> <span class="toc-text">1.下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装主题"><span class="toc-number">2.</span> <span class="toc-text">2.安装主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-更新配置文件"><span class="toc-number">3.</span> <span class="toc-text">3.更新配置文件</span></a></li></ol>
+        </div>
+    
 </div>
-<div id="preview"></div>
 
+
+    </div>
+</div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
